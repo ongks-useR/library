@@ -1,0 +1,175 @@
+
+/* For profile and web form */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Jura:wght@300..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Pinyon+Script&family=Playwrite+VN:wght@100..400&family=Poiret+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&display=swap');
+
+/* For book shelf */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Jura:wght@300..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Pinyon+Script&family=Playwrite+VN:wght@100..400&family=Poiret+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+
+.user-menu {
+    grid-column: 1 / 2;
+}
+
+
+.profile {
+    /* Font style */
+    font-family: "Poiret One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.profile svg {
+    height: 25px;
+    width: 25px;
+}
+
+
+form {
+    visibility: hidden;
+    padding: 0 15px;
+}
+
+form label {
+    display: block;
+
+    font-family: "Jura", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+}
+
+
+form input,
+form textarea {
+    margin-bottom: 10px;
+    padding: 3px;
+
+    font-family: "Jura", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+}
+
+#title,
+#author {
+    width: 220px;
+}
+
+
+#print_date,
+#pages,
+#rating {
+    width: 120px;
+}
+
+
+#new-book {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px 20px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+}
+
+.book-status {
+    display: flex;
+    column-gap: 20px;
+}
+
+.option {
+    width: 60px;
+}
+
+.option input {
+    width: 10px;
+    height: 10px;
+}
+
+.option label {
+    display: inline-block;
+    margin-left: 3px;
+    font-size: 16px;
+}
+
+
+.book-shelf {
+    grid-column: 2 / 3;
+
+    border-left: 2px dotted grey;
+    padding: 15px;
+    overflow-y: scroll;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(265px, 1fr));
+    grid-template-rows: repeat(2, 300px);
+    grid-auto-rows: 300px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.book {
+    padding: 10px;
+    border: 2px dashed lightseagreen;
+
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book > p:first-of-type {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.book-info > p {
+    font-size: 12px;
+}
+
+.status-icons {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 10px;
+    padding: 5px;
+}
+
+.status-icons svg {
+    height: 20px;
+    width: 20px;
+}
+
+.read {
+    border-radius: 50%;
+    background-color: green;
+}

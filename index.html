@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book+</title>
+    <link rel="stylesheet" href="library.css">
+</head>
+<body>
+    <div class="container">
+        <div class="user-menu">
+            <div class="profile">
+                <p>Book +</p>
+                <svg id="new-form" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path d="M373.5 27.1C388.5 9.9 410.2 0 433 0c43.6 0 79 35.4 79 79c0 22.8-9.9 44.6-27.1 59.6L277.7 319l-10.3-10.3-64-64L193 234.3 373.5 27.1zM170.3 256.9l10.4 10.4 64 64 10.4 10.4-19.2 83.4c-3.9 17.1-16.9 30.7-33.8 35.4L24.3 510.3l95.4-95.4c2.6 .7 5.4 1.1 8.3 1.1c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32c0 2.9 .4 5.6 1.1 8.3L1.7 487.6 51.5 310c4.7-16.9 18.3-29.9 35.4-33.8l83.4-19.2z"/>
+                </svg>
+            </div>
+            <form action="" method="post">
+                <label for="title">Title:</label>
+                <textarea name="book_title" id="title" rows="4" required></textarea>
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author" required>
+                <label for="print_date">Published Date:</label>
+                <input type="date" name="print_date" id="print_date" value="2025-01-01" min="1980-01-01" max="2025-12-31">
+                <label for="pages">Print Length:</label>
+                <input type="text" name="pages" id="pages" required>
+                <label for="rating">Rating:</label>
+                <input type="text" name="rating" id="rating" required>
+                <label for="status">Status:</label>
+                <div class="book-status">
+                    <div class="option">
+                        <input type="radio" name="status" id="new" value="New" checked>
+                        <label for="new">New</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="status" id="completed" value="Completed">
+                        <label for="completed">Read</label>
+                    </div>
+                </div>
+                <input id="new-book" type="submit" value="New Book">
+            </form>
+        </div>
+        <div class="book-shelf">
+
+        </div>
+    </div>
+    <script src="library.js"></script>
+</body>
+</html>
